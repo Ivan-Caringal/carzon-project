@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',  # Use PostgreSQL
         'NAME': 'carzone_db',  # Your database name
         'USER': 'postgres',
-        'PASSWORD': 'caringal20',  # Your password (consider using environment variables)
+        'PASSWORD': 'joanna061217',  # Your password (consider using environment variables)
        
     }
 }
@@ -127,6 +127,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'carzone/static'),
 ]
+
+# Media settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

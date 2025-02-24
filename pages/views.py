@@ -12,7 +12,11 @@ def home(request):
     return render(request, 'pages/home.html', data)
 
 def about(request):
-    return render(request, 'pages/about.html')
+    teams = Team.objects.all()
+    data = {
+        'teams': teams,
+    }
+    return render(request, 'pages/about.html', data)
 
 def contact(request):
     return render(request, 'pages/contact.html')
@@ -25,10 +29,19 @@ def services(request):
 from django.shortcuts import render
 
 def search(request):
-    query = request.GET.get('q')
-    # Implement your search logic here
+    keyword = request.GET.get('keyword', '')  
+    print("Keyword searched:", keyword)  # Debugging
+
+    if keyword:
+        results = Team.objects.filter(first_name__icontains=keyword)  
+    else:
+        results = Team.objects.none()  
+
+    print("Results:", results)  # Debugging
+
     context = {
-        'query': query,
-        # Add other context variables as needed
+        'query': keyword,
+        'results': results,
     }
-    return render(request, 'search_results.html', context)
+
+    return render(request, 'base.html', context)  # Check this template name

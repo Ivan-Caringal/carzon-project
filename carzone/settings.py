@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
+    'cars.apps.CarsConfig',
     'django.contrib.humanize',  # ✅ Add this line
+    'ckeditor',  # Add this
 ]
 
 MIDDLEWARE = [
@@ -80,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',  # Use PostgreSQL
         'NAME': 'carzone_db',  # Your database name
         'USER': 'postgres',
-        'PASSWORD': 'joanna061217',  # Your password (consider using environment variables)
+        'PASSWORD': 'caringal20',  # Your password (consider using environment variables)
        
     }
 }

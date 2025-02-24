@@ -23,6 +23,8 @@ pip install django
 pip install psycopg2
 pip install psycopg2-binary
 python -c "import psycopg" or python -c "import psycopg2"
+pip install django-ckeditor
+pip install django-multiselectfield
 
 
 

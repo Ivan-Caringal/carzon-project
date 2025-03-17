@@ -29,3 +29,7 @@ pip install django-multiselectfield
 
 
 python manage.py runserver  
+
+
+
+section 10 04/03/2025

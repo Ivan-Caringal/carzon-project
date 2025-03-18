@@ -5,8 +5,12 @@ django-ckeditor==6.7.2
 django-crispy-forms==2.3
 django-js-asset==3.0.1
 django-multiselectfield==0.1.13
+gunicorn==23.0.0
+packaging==24.2
 pillow==11.1.0
 psycopg==3.2.4
 psycopg2==2.9.10
+psycopg2-binary==2.9.10
 sqlparse==0.5.3
 tzdata==2025.1
+whitenoise==5.1.0
